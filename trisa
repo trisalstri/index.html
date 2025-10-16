@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darn Cafe - Kue & Kopi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff5f7;
+      color: #4a3b40;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ffcce0;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: #b84a62;
+      font-size: 1.6rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a3b40;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #b84a62;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #ffe6ef;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #b84a62;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      background-color: #b84a62;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #d65a7c;
+      transform: scale(1.05);
+    }
+
+    .menu-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #b84a62;
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      padding: 0 10px 15px;
+    }
+
+    .about-section, .contact-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about-section {
+      background-color: #ffe6ef;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 350px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ffcce0;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    button {
+      background-color: #b84a62;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d65a7c;
+    }
+
+    footer {
+      background-color: #ffcce0;
+      text-align: center;
+      padding: 15px;
+      color: #4a3b40;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Darn Cafe</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Selamat Datang di Darn Cafe</h2>
+    <p>Kopi hangat & kue manis untuk hari yang indah 💕</p>
+    <button onclick="scrollToMenu()">Lihat Menu</button>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>Menu Kami</h2>
+    <div class="menu-container">
+      <div class="card">
+        <img src="https://i.imgur.com/KF8YBqz.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Kopi lembut dengan susu steamed dan busa tipis.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/pfU7h0Q.jpg" alt="Red Velvet Cake">
+        <h3>Red Velvet Cake</h3>
+        <p>Kue lembut berwarna merah dengan krim keju lezat.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/zzBkXj1.jpg" alt="Latte">
+        <h3>Latte</h3>
+        <p>Kombinasi sempurna antara espresso dan susu panas.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/dTQG4bp.jpg" alt="Cupcake Strawberry">
+        <h3>Cupcake Strawberry</h3>
+        <p>Mini cake manis dengan topping krim stroberi segar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>Tentang Kami</h2>
+    <p>
+      Darn Cafe adalah tempat sempurna untuk menikmati secangkir kopi
+      sambil mencicipi berbagai kue buatan sendiri.  
+      Kami menghadirkan suasana nyaman dengan aroma kopi yang menggoda.
+    </p>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Kontak Kami</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Nama Anda" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Pesan Anda..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+    <p id="thanksMessage" style="margin-top:10px; color:#b84a62; font-weight:500;"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Darn Cafe | Dibuat
